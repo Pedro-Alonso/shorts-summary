@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link rel="stylesheet" href="web/styles/passreset.css">
+
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,25 +16,19 @@
       rel="stylesheet"
     />
 
-    <title>Shorts Transcription</title>
+    <title>Shorts Transcription - Password reset</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <img src="/logo.svg" alt="Logo" />
 
-    <h1>Shorts Transcription</h1>
+  <body id="body">
 
-    <form id="form">
-      <input type="url" id="url" placeholder="URL do vídeo" />
-      <button title="Resumir">
-        <i class="ph ph-play"></i>
-      </button>
-    </form>
+    <div id="resetBox">
+      <div id="logoNtitle">
+        <img src="/logo.svg" id="logo" alt="Logo" />
+        <h1 id="title">Shorts Transcription</h1>
+      </div>
+    </div>
 
-    <h2>Resumo</h2>
-    <p id="content" class="placeholder">Escolha um short para extrair a transcrição</p>
-
-    <script type="module" src="web/main.js"></script>
+    <script type="module" src="web/resetpage.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </body>
 </html>

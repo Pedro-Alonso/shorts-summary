@@ -5,7 +5,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#loginBox {
+#resetBox {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     344deg,
@@ -36,37 +36,55 @@
 }
 
 #logo {
-  cursor: pointer;
   height: 100px;
   transition: all ease-in-out 0.5s;
 }
 
-#loginArea {
+#passResetArea {
   transition: all ease-in 0.3s;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#loginForm {
+#instructions {
+  font-size: 1rem;
+  margin: 4rem 3.875rem 2rem 3.875rem;
+}
+
+#resetForm {
   display: flex;
   flex-direction: column;
   transition: all ease-in-out 0.5s;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-#usernameLabel,
-#passwordLabel {
+#emailLabel,
+#codeLabel,
+#newPassLabel,
+#newPass2Label {
   margin-right: 5px;
   font-weight: bold;
   padding-bottom: 0.2rem;
   transition: all ease-in-out 0.5s;
+  width: 18rem;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
-#usernameBox {
+#emailBox,
+#newPassBox {
   margin-bottom: 2rem;
   transition: all ease-in-out 0.5s;
 }
 
-#usernameBox,
-#passwordBox {
+#emailBox,
+#codeBox,
+#newPassBox,
+#newPass2Box {
   width: 18rem;
   border-radius: 0.5rem;
   height: 1.8rem;
@@ -85,21 +103,39 @@
   }
 }
 
-#forgottenPass,
-#createAccount {
-  text-decoration: none;
-  color: rgb(172, 144, 239);
-  font-size: 0.8rem;
-  margin-top: 0.1rem;
-  transition: all ease-in-out 0.5s;
+#sendCodeButton, #setPassButton, #changePassButton {
+  width: 7rem;
+  height: 2rem;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  color: white;
+
+  background-color: rgb(150, 107, 249);
 
   &:hover {
-    color: rgb(196, 175, 247);
+    background-color: rgb(193, 171, 243);
   }
 }
 
-#subtexts {
+#compWarning,
+#valWarning,
+#simWarning {
+  opacity: 0;
+  transition: all ease-in 0.2s;
+  position: absolute;
+  bottom: -2rem;
+  color: red;
+  font-size: 0.8rem;
   width: 18rem;
-  display: flex;
-  justify-content: space-between;
+  padding: 0.5rem 1rem 0 1rem;
+}
+
+#valWarning{
+  bottom: -8rem;
+}
+
+#simWarning {
+  bottom: -3rem
 }

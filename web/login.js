@@ -43,10 +43,18 @@ async function abrirLogin() {
   password.setAttribute("placeholder", "Insira sua senha aqui")
   password.setAttribute("id", "passwordBox")
 
+  var subtexts = document.createElement("div")
+  subtexts.setAttribute('id', 'subtexts')
+
   var forgot = document.createElement("a")
   forgot.setAttribute("id", "forgottenPass")
-  forgot.href = "./main.html"
+  forgot.href = "./passreset.html"
   forgot.innerHTML = "Esqueci minha senha"
+
+  var register = document.createElement("a")
+  register.setAttribute("id", "createAccount")
+  register.href = "./main.html"
+  register.innerHTML = "Registrar-se"
 
   var box = document.getElementById("loginBox")
   box.appendChild(loginArea)
@@ -55,7 +63,9 @@ async function abrirLogin() {
   form.appendChild(username)
   form.appendChild(passwordLabel)
   form.appendChild(password)
-  form.appendChild(forgot)
+  form.appendChild(subtexts)
+  subtexts.appendChild(register)
+  subtexts.appendChild(forgot)
 
   let espera2 = await delay(750)
   loginArea.style.opacity = "1"
