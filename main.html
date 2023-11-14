@@ -22,6 +22,14 @@
 
     <h1>Shorts Transcription</h1>
 
+    <iframe
+      id="videoFrame"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
     <form id="form">
       <input type="url" id="url" placeholder="URL do vídeo" />
       <button title="Resumir">
@@ -30,7 +38,9 @@
     </form>
 
     <h2>Resumo</h2>
-    <p id="content" class="placeholder">Escolha um short para extrair a transcrição</p>
+    <p id="content" class="placeholder">
+      Escolha um short para extrair a transcrição
+    </p>
 
     <script type="module" src="web/main.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>

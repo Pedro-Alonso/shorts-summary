@@ -41,3 +41,8 @@
   font-size: 24px;
   color: #fff;
 }
+
+iframe {
+  width: 9.5rem;
+  height: 15.4rem;
+}

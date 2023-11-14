@@ -31,3 +31,16 @@ form.addEventListener("submit", async (event) => {
 
   content.classList.remove("placeholder")
 })
+
+var source = document.getElementById("url")
+source.addEventListener('focus', videoThumbnail)
+source.addEventListener('blur', videoThumbnail)
+
+function videoThumbnail() {
+  var frame = document.getElementById('videoFrame')
+  let newSource = (source.value).toString()
+  newSource = newSource.replace("shorts", "embed")
+  console.log(newSource)
+  frame.setAttribute('src', newSource)
+
+}
