@@ -17,7 +17,7 @@
 #app > p {
   align-self: flex-start;
   text-align: justify;
-  width: 512px;
+  width: 75vw;
   margin-top: -5px;
 }
 
