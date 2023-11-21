@@ -55,6 +55,13 @@ async function abrirLogin() {
   register.setAttribute("id", "createAccount")
   register.href = "./main.html"
   register.innerHTML = "Registrar-se"
+  
+  var enterButton = document.createElement("button");
+  enterButton.setAttribute("id", "enterButton")
+  enterButton.innerHTML = 'Entrar';
+  enterButton.onclick = function(){
+    window.location.href = "./main.html"
+  }
 
   var box = document.getElementById("loginBox")
   box.appendChild(loginArea)
@@ -66,6 +73,7 @@ async function abrirLogin() {
   form.appendChild(subtexts)
   subtexts.appendChild(register)
   subtexts.appendChild(forgot)
+  form.appendChild(enterButton)
 
   let espera2 = await delay(750)
   loginArea.style.opacity = "1"
