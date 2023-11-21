@@ -58,11 +58,15 @@ async function abrirLogin() {
   
   var enterButton = document.createElement("button");
   enterButton.setAttribute("id", "enterButton")
+  enterButton.setAttribute("type", "button")
   enterButton.innerHTML = 'Entrar';
   enterButton.setAttribute('type', 'button')
   enterButton.onclick = function(){
     window.location.href = "./main.html"
   }
+  
+  //enterButton.setAttribute('type', 'submit')
+  //form.addEventListener("submit", intoMain(enterButton))
 
   var box = document.getElementById("loginBox")
   box.appendChild(loginArea)
@@ -82,3 +86,9 @@ async function abrirLogin() {
 
   logo.removeEventListener("click", abrirLogin)
 }
+
+function intoMain(){
+  document.getElementById("enterButton").action = 
+  window.location.href = "./main.html"
+}
+
