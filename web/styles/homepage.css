@@ -5,6 +5,13 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #loginBox {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -42,7 +49,7 @@
 }
 
 #loginArea {
-  margin-top: 7rem ;
+  margin-top: 7rem;
   transition: all ease-in 0.3s;
   font-size: 20px;
 }
@@ -121,4 +128,15 @@
   &:hover {
     background-color: #633bbc;
   }
+}
+
+#mapContainer {
+  width: 100%;
+  height: 100vh;
+  padding: 16rem;
+}
+
+#map {
+  width: 100%;
+  height: 480px;
 }

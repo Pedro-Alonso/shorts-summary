@@ -6,6 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="web/styles/homepage.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
 
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,16 +21,27 @@
       rel="stylesheet"
     />
     <script type="module" src="web/homepage.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
 
     <title>Shorts Transcription - Login</title>
   </head>
 
   <body id="homepage">
-    <div id="loginBox">
-      <div id="logoNtitle">
-        <img src="/logo.svg" id="logo" alt="Logo" />
-        <h1 id="title">Shorts Transcription</h1>
+    <div id="loginContainer">
+      <div id="loginBox">
+        <div id="logoNtitle">
+          <img src="/logo.svg" id="logo" alt="Logo" />
+          <h1 id="title">Shorts Transcription</h1>
+        </div>
       </div>
+    </div>
+
+    <div id="mapContainer">
+      <div id="map"></div>
     </div>
 
     <script type="module" src="web/homepage.js"></script>
