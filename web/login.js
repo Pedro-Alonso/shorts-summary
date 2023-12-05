@@ -4,6 +4,14 @@ const delay = (delayInms) => {
   return new Promise((resolve) => setTimeout(resolve, delayInms))
 }
 
+var map = L.map("map").setView([-22.1208901, -51.4084913], 18)
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map)
+
 async function abrirLogin() {
   var logo = document.getElementById("logo")
   // logo.style.position = "absolute"
@@ -44,7 +52,7 @@ async function abrirLogin() {
   password.setAttribute("id", "passwordBox")
 
   var subtexts = document.createElement("div")
-  subtexts.setAttribute('id', 'subtexts')
+  subtexts.setAttribute("id", "subtexts")
 
   var forgot = document.createElement("a")
   forgot.setAttribute("id", "forgottenPass")
@@ -55,16 +63,16 @@ async function abrirLogin() {
   register.setAttribute("id", "createAccount")
   register.href = "./signup.html"
   register.innerHTML = "Registrar-se"
-  
-  var enterButton = document.createElement("button");
+
+  var enterButton = document.createElement("button")
   enterButton.setAttribute("id", "enterButton")
   enterButton.setAttribute("type", "button")
-  enterButton.innerHTML = 'Entrar';
-  enterButton.setAttribute('type', 'button')
-  enterButton.onclick = function(){
+  enterButton.innerHTML = "Entrar"
+  enterButton.setAttribute("type", "button")
+  enterButton.onclick = function () {
     window.location.href = "./main.html"
   }
-  
+
   //enterButton.setAttribute('type', 'submit')
   //form.addEventListener("submit", intoMain(enterButton))
 
@@ -87,8 +95,7 @@ async function abrirLogin() {
   logo.removeEventListener("click", abrirLogin)
 }
 
-function intoMain(){
-  document.getElementById("enterButton").action = 
-  window.location.href = "./main.html"
+function intoMain() {
+  document.getElementById("enterButton").action = window.location.href =
+    "./main.html"
 }
-
