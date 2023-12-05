@@ -133,10 +133,16 @@
 #mapContainer {
   width: 100%;
   height: 100vh;
-  padding: 16rem;
+  padding: 0 16rem;
 }
 
 #map {
   width: 100%;
   height: 480px;
+}
+
+#description {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  text-align: center;
 }

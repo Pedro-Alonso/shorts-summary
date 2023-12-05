@@ -14,13 +14,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 async function abrirLogin() {
   var logo = document.getElementById("logo")
-  // logo.style.position = "absolute"
-  // logo.style.marginBottom = "27rem"
   logo.style.cursor = "default"
-
-  // var title = document.getElementById('title')
-  // title.style.position = "absolute"
-  // title.style.marginBottom = "20rem"
 
   var logoNtitle = document.getElementById("logoNtitle")
   logoNtitle.style.position = "absolute"
@@ -70,11 +64,9 @@ async function abrirLogin() {
   enterButton.innerHTML = "Entrar"
   enterButton.setAttribute("type", "button")
   enterButton.onclick = function () {
-    window.location.href = "./main.html"
+    if (username.value != '' && password.value != '') window.location.href = "./main.html"
+    else alert('Favor, preencher todos os campos acima.')
   }
-
-  //enterButton.setAttribute('type', 'submit')
-  //form.addEventListener("submit", intoMain(enterButton))
 
   var box = document.getElementById("loginBox")
   box.appendChild(loginArea)
@@ -86,7 +78,6 @@ async function abrirLogin() {
   form.appendChild(subtexts)
   subtexts.appendChild(register)
   subtexts.appendChild(forgot)
-  //form.appendChild(enterButton)
   form.appendChild(enterButton)
 
   let espera2 = await delay(750)
