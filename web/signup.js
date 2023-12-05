@@ -73,9 +73,7 @@ async function signUp(){
     loginButton.setAttribute("id", "loginButton")
     loginButton.setAttribute("type", "button")
     loginButton.innerHTML = 'Criar conta';
-    loginButton.onclick = function(){
-        alert("teste");
-      }
+    loginButton.addEventListener("click", verifySignUp)
 
     var box = document.getElementById("registerBox")
     box.appendChild(registerArea)
@@ -97,3 +95,27 @@ async function signUp(){
     registerArea.style.opacity = "1"
 }
 
+function verifySignUp(){
+    var firstNameValue = document.getElementById("firstName").value;
+    var secondNameValue = document.getElementById("secondName").value;
+    var emailValue = document.getElementById("email").value;
+    var passwordValue = document.getElementById("password").value;
+    var confirmPasswordValue = document.getElementById("confirmPassword").value;
+    // pega todos os valores dos inputs
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // verifica se o email digitado é do tipo ____@____.____
+
+    if(firstNameValue === "" || secondNameValue === "" || emailValue === "" || passwordValue === "" || confirmPasswordValue === ""){
+        alert("Por favor, preencha todos os campos.");
+    }else{
+        if(!emailRegex.test(emailValue)){ // essa função verifica se emailValue tem o padrão pedido em emailRegex e retorna true caso verdadeiro, mas por causa do "!", ele inverte o resultado
+            alert("Por favor, insira um email válido.");
+        }else{
+            if(passwordValue !== confirmPasswordValue){
+                alert("As senhas não coincidem. Por favor, insira senhas iguais.");
+            }else{
+                alert("Cadastro bem-sucedido!");
+                document.location.href = "http://localhost:5173/index.html";
+            }
+        }
+    }
+}
